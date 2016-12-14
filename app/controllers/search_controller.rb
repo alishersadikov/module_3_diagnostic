@@ -1,5 +1,6 @@
 class SearchController < ApplicationController
   def index
-    @stations = NrelService.new.stations_by_zipcode(params[:zipcode])
+    @stations = Station.by_zipcode(params[:zipcode])
+    binding.pry
   end
 end

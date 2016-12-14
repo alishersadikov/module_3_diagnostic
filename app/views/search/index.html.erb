@@ -1,26 +1,18 @@
-
 <%= @stations.each do |station| %>
-  <%= station.name %>
-  <%= station.address %>
-  <%= station.fuel_type %>
-  <%= station.distance %>
-  <%= station.access_time %>
-<% end %>
-
-<table style="width:100%">
+<table>
   <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Age</th>
+    <th>Station Name</th>
+    <th>Address</th>
+    <th>Fuel Type</th>
+    <th>Distance</th>
+    <th>Access Time</th>
   </tr>
   <tr>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
+      <td><%= station.name %></td>
+      <td><%= station.address %></td>
+      <td><%= station.fuel_type %></td>
+      <td><%= station.distance %></td>
+      <td><%= station.access_time %></td>
   </tr>
 </table>
+<% end %>
