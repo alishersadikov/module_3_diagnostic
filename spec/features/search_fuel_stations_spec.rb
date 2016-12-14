@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe "Search for fuel stations" do
   context "searching by zipcode" do
     it "returns propane and electric stations within 6 miles" do
