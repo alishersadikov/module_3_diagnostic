@@ -1,4 +1,3 @@
-<%= @stations.each do |station| %>
 <table>
   <tr>
     <th>Station Name</th>
@@ -7,6 +6,7 @@
     <th>Distance</th>
     <th>Access Time</th>
   </tr>
+  <% @stations.each do |station| %>
   <tr>
       <td><%= station.name %></td>
       <td><%= station.address %></td>
@@ -14,5 +14,5 @@
       <td><%= station.distance %></td>
       <td><%= station.access_time %></td>
   </tr>
+  <% end %>
 </table>
-<% end %>
