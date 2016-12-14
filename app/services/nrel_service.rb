@@ -9,8 +9,6 @@ class NrelService
 
   def build_stations(json_response)
     raw_stations = json_response[:fuel_stations]
-    raw_stations.each do |station|
-      Station.new(raw_station)
-    end
+    stations = raw_stations.map { |raw_station|  Station.new(raw_station) }.first(10)
   end
 end
