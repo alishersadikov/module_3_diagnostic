@@ -6,6 +6,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'capybara/rails'
+require 'capybara/rspec'
 require 'vcr'
 
 Shoulda::Matchers.configure do |config|
@@ -43,7 +44,7 @@ ActiveRecord::Migration.maintain_test_schema!
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
-  config.formatter = :documentation
+  # config.formatter = :documentation
 
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your

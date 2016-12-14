@@ -11,9 +11,9 @@ RSpec.describe "Search for fuel stations" do
       # And the stations should be limited to Electric and Propane
       # And for each of the stations I should see Name, Address, Fuel Types, Distance, and Access Times
       #
-      visit root_path
+      visit '/'
 
-      fill_in "Search", with "80203"
+      fill_in "Search", with: "80203"
       click "Locate"
 
       expect(path).to eq("/search?zipcode=80203")
